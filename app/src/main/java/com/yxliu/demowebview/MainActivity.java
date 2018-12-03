@@ -13,6 +13,10 @@ import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+//    private String url = "file:///android_asset/index.html";
+    private String url = "file:///android_asset/web/test-framework.html";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("URL", "http:www.baidu.com");
                 break;
             case R.id.btn_load_apk:
-                intent.putExtra("URL", "file:///android_asset/index.html");
+                intent.putExtra("URL", url);
                 break;
             case R.id.btn_load_local:
                 intent.putExtra("URL", getLocalUrl());
